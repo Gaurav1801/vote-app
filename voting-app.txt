@@ -1,0 +1,40 @@
+Voting applicaton
+what ?
+A Functonalit where user can giv vote to the given set of candidate
+
+
+Model?
+Routes?
+Voting Functionality
+
+1. user signup/login
+2. see the list fof candidate 
+3. vote one of the candidate , after voting the user can't vote again
+4. there is the route of showing the list of candidate and their live vote count sorted by their vote count.
+5. user date must contain the unique id by government {aadgare card number}
+6. their should be  one admin who create the candidate list and also able to delete the candiadte from list and he should not able to vote.
+7. user can change their password 
+8. user can only login with aadhare number and password
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+Routes
+
+User Authentication:
+    /singup: POST  -Create a new account.
+    /login :POST  -Log in to an existing account .[aadhar card number + password]
+
+Voting:
+    /cnadidates:GET -Get the list of Candidate.
+    /vote/:candidateId: POST -Vote for the special candidateId
+
+Vote COunts:
+    /vote/counts:GET -Get the list of candidate sorted by their vote counts
+
+User's Profile:
+    /profile:GET - Get the user's profile infornatiom
+    /profile/password :PUT -Change the password.
+
+Admin Candidate Management :
+    /Candidate :POST -Creat a new candidate
+    /Candidate/:candidateId -PUT -Update an existing candidate
+    /candidate/:candidateId -DELETE -delete a cnadidate from the list.
